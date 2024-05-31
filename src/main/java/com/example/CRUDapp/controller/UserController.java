@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-
 import java.util.*;
 
 @RestController
@@ -15,7 +14,6 @@ public class UserController
 {
     @Autowired
     userRepo ur;
-
 
     @GetMapping(path = "/getallusers")
     public ResponseEntity<List<User>> getAllUsers()
@@ -26,7 +24,6 @@ public class UserController
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(res, HttpStatus.OK);
-
     }
 
     @GetMapping(path = "/getuserbyid/{username}")
